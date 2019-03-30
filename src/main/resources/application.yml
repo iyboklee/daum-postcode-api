@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: daum postcode search api
+  mvc:
+    throw-exception-if-no-handler-found: false
+  thymeleaf:
+    cache: true
+  cache:
+    caffeine:
+      spec: maximumSize=1000,expireAfterAccess=3600s
+  messages:
+      basename: messages/messages
+      cache-seconds: 60
+      encoding: UTF-8
+daum:
+  postcode:
+    url: http://postcode.map.daum.net/search?region_name=
+    origin: http://adddress.hellowd.com
+    user-agent: "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0"
